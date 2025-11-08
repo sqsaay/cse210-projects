@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.5.002.0
+VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "week01", "week01", "{7D98D489-4D78-4660-B2EC-D9514D3AF13D}"
 EndProject
@@ -52,6 +52,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YouTubeVideos", "week04\YouTubeVideos\YouTubeVideos.csproj", "{A6709D86-1F90-495D-8153-747314A4A638}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineOrdering", "week04\OnlineOrdering\OnlineOrdering.csproj", "{E1B72617-DE50-4DD7-900B-8C51A2CE59DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSHARPDEMO", "CSHARPDEMO", "{60D32D57-6C15-6094-9AB5-D4784B7848FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "CSHARPDEMO\ConsoleApp1\ConsoleApp1.csproj", "{06819D99-A47F-4462-837F-6013C4ECF10D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -127,6 +131,10 @@ Global
 		{E1B72617-DE50-4DD7-900B-8C51A2CE59DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1B72617-DE50-4DD7-900B-8C51A2CE59DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1B72617-DE50-4DD7-900B-8C51A2CE59DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06819D99-A47F-4462-837F-6013C4ECF10D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06819D99-A47F-4462-837F-6013C4ECF10D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06819D99-A47F-4462-837F-6013C4ECF10D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06819D99-A47F-4462-837F-6013C4ECF10D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -149,6 +157,7 @@ Global
 		{6D76A1CF-EC33-4A11-A4D1-875E3BC9B0F4} = {F02862B3-F181-4F4C-9998-E7B60A408DE0}
 		{A6709D86-1F90-495D-8153-747314A4A638} = {DF91008F-F53E-47FA-8705-F7975A484AC4}
 		{E1B72617-DE50-4DD7-900B-8C51A2CE59DC} = {DF91008F-F53E-47FA-8705-F7975A484AC4}
+		{06819D99-A47F-4462-837F-6013C4ECF10D} = {60D32D57-6C15-6094-9AB5-D4784B7848FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0FE697C-A888-4331-AE3F-A57311A5E554}
