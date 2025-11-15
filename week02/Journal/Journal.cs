@@ -15,29 +15,37 @@ public class Journal
         }
     }
 
-    public void SaveToFile(string filename)
+    public void SaveToFile()
+{
+    using (StreamWriter writer = new StreamWriter("journal.txt"))
     {
-        using (StreamWriter writer = new StreamWriter(filename))
+        foreach (Entry entry in _entries)
         {
-            foreach (Entry entry in _entries)
+            writer.WriteLine(entry.FormatEntry());
+        }
+    }
+}
+
+    public void LoadFromFile()
+    {
+        _entries.Clear();
+        if (File.Exists("journal.txt"))
+        {
+            string[] lines = File.ReadAllLines("journal.txt");
+            foreach (string line in lines)
             {
-                writer.WriteLine(entry.FormatEntry());
+                string[] parts = line.Split('|');
+                if (parts.Length == 3)
+                {
+                    Entry entry = new Entry(parts[0], parts[1], parts[2]);
+                    _entries.Add(entry);
+                }
             }
+        }
+        else
+        {
+            Console.WriteLine("No journal.txt file found.");
         }
     }
 
-    public void LoadFromFile(string filename)
-    {
-        _entries.Clear();
-        string[] lines = File.ReadAllLines(filename);
-        foreach (string line in lines)
-        {
-            string[] parts = line.Split('|');
-            if (parts.Length == 3)
-            {
-                Entry entry = new Entry(parts[0], parts[1], parts[2]);
-                _entries.Add(entry);
-            }
-        }
-    }
 }

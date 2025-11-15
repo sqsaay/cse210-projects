@@ -36,15 +36,13 @@ class Program
                     break;
 
                 case "3":
-                    Console.Write("Enter filename to save: ");
-                    string saveFile = Console.ReadLine();
-                    journal.SaveToFile(saveFile);
+                    journal.SaveToFile();
+                    Console.WriteLine("Journal saved to journal.txt.");
                     break;
 
                 case "4":
-                    Console.Write("Enter filename to load: ");
-                    string loadFile = Console.ReadLine();
-                    journal.LoadFromFile(loadFile);
+                    journal.LoadFromFile();
+                    Console.WriteLine("Journal loaded from journal.txt.");
                     break;
 
                 case "5":
