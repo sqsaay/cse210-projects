@@ -1,9 +1,11 @@
 class ListingActivity : Activity
 {
     private List<string> prompts = new List<string> {
-        "List as many things as you are grateful for.",
-        "List people who inspire you.",
-        "List personal strengths you have."
+        "Who are people that you appreciate?",
+        "What are personal strengths of yours?",
+        "Who are people that you have helped this week?",
+        "When have you felt the Holy Ghost this month?",
+        "Who are some personal heroes of yours?"
     };
 
     public ListingActivity() 
@@ -25,5 +27,7 @@ class ListingActivity : Activity
         }
         Console.WriteLine($"You listed {items.Count} items!");
         DisplayEndingMessage();
+        LogActivity();
     }
+
 }

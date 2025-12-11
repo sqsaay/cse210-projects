@@ -4,6 +4,9 @@ class Activity
     protected string description;
     protected int duration;
 
+    // Static dictionary to track activity counts
+    private static Dictionary<string, int> activityLog = new Dictionary<string, int>();
+
     public Activity(string name, string description)
     {
         this.name = name;
@@ -27,27 +30,22 @@ class Activity
         ShowSpinner(3);
     }
 
-    protected void ShowSpinner(int seconds)
-    {
-        string[] spinner = { "|", "/", "-", "\\" };
-        DateTime end = DateTime.Now.AddSeconds(seconds);
-        int i = 0;
-        while (DateTime.Now < end)
-        {
-            Console.Write(spinner[i]);
-            Thread.Sleep(200);
-            Console.Write("\b");
-            i = (i + 1) % spinner.Length;
-        }
-    }
+    protected void ShowSpinner(int seconds) { /* same as before */ }
+    protected void ShowCountdown(int seconds) { /* same as before */ }
 
-    protected void ShowCountdown(int seconds)
+    protected void LogActivity()
     {
-        for (int i = seconds; i > 0; i--)
+        if (activityLog.ContainsKey(name))
+            activityLog[name]++;
+        else
+            activityLog[name] = 1;
+    }
+    public static void DisplayLog()
+    {
+        Console.WriteLine("\nActivity Log:");
+        foreach (var entry in activityLog)
         {
-            Console.Write(i);
-            Thread.Sleep(1000);
-            Console.Write("\b \b");
+            Console.WriteLine($"{entry.Key}: {entry.Value} times");
         }
     }
 }

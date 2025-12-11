@@ -10,12 +10,13 @@ class BreathingActivity : Activity
         while (DateTime.Now < end)
         {
             Console.Write("Breathe in... ");
-            ShowCountdown(4);
+            ShowCountdown(3);
             Console.WriteLine();
             Console.Write("Breathe out... ");
-            ShowCountdown(6);
+            ShowCountdown(3);
             Console.WriteLine();
         }
         DisplayEndingMessage();
+        LogActivity(); 
     }
 }
