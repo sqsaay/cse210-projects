@@ -1,4 +1,3 @@
-
 namespace EternalQuest;
 
 class Program
